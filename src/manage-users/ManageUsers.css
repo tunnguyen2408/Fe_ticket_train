@@ -1,0 +1,196 @@
+/* Overall container */
+.container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Loại bỏ margin để container không bị căn giữa */
+    position: relative;
+  }
+  
+  .user-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Đảm bảo danh sách chiếm toàn bộ chiều rộng container */
+  }
+  
+  .user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    width: 50%; /* Đặt chiều rộng của mỗi item là 50% chiều rộng container */
+  }
+  /* Hover effect */
+.user-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Hide the delete button by default */
+  .user-actions {
+    display: none;
+    gap: 10px;
+    justify-content: flex-end;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Show delete button when hovering over the user item */
+  .user-item:hover .user-actions {
+    display: flex;
+  }
+  
+  .user-info {
+    font-size: 16px;
+    color: #555;
+    width: 80%;
+  }
+  
+  .delete-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #d32f2f;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #c62828;
+  }
+  
+  /* Modal container */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền tối mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Thêm hiệu ứng mờ */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 80%; /* Chiếm 80% chiều rộng màn hình */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bóng đổ nhẹ */
+    animation: fadeIn 0.3s ease-out; /* Hiệu ứng fade-in khi hiển thị modal */
+  }
+  
+  /* Tiêu đề modal */
+  .modal h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333; /* Màu chữ */
+    font-weight: 600; /* In đậm */
+    text-align: center;
+  }
+  
+  /* Nội dung modal */
+  .modal p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555; /* Màu chữ nhạt hơn */
+    line-height: 1.5;
+  }
+  
+  /* Nút đóng modal */
+  .close-button {
+    padding: 10px 20px;
+    background-color: #1976d2; /* Màu xanh */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Thêm hiệu ứng chuyển động */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .close-button:hover {
+    background-color: #1565c0; /* Màu tối hơn khi hover */
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+  }
+  
+  .close-button:focus {
+    outline: none; /* Loại bỏ viền khi focus vào nút */
+  }
+  
+  /* Hiệu ứng fade-in cho modal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); /* Đưa modal từ trên xuống */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Thêm hiệu ứng bóng đổ nhẹ cho modal khi mở */
+  .modal-content {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Khi modal ẩn, cho opacity giảm đi */
+  .modal-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  
+  /* Loading and error messages */
+  .loading, .error {
+    font-size: 16px;
+    color: #d32f2f;
+    text-align: center;
+  }
+
+  /* Nút Xoá Tài Khoản */
+.delete-button {
+    padding: 10px 20px;
+    background-color: #e53935; /* Màu đỏ */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Thêm hiệu ứng chuyển động */
+    display: block;
+    margin: 10px auto 0; /* Đặt ở dưới nút đóng */
+  }
+  
+  /* Hiệu ứng khi hover nút Xoá */
+  .delete-button:hover {
+    background-color: #d32f2f; /* Màu đỏ đậm khi hover */
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ */
+  }
+  
+  .delete-button:focus {
+    outline: none; /* Loại bỏ viền khi focus vào nút */
+  }

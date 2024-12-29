@@ -1,0 +1,236 @@
+/* Stations.css */
+.stations-container {
+}
+
+.add-station-btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-station-form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.submit-btn {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stations-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.station-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.action-buttons-stations {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+.station-item:hover .action-buttons-stations {
+    display: block;
+}
+
+.update-btn-stations {
+    padding: 5px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    width: 90px;
+}
+
+.delete-btn-stations {
+    padding: 5px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.add-btn {
+    position: fixed;
+    /* Cố định nút ở vị trí cố định */
+    bottom: 20px;
+    /* Khoảng cách từ dưới lên */
+    right: 20px;
+    /* Khoảng cách từ bên phải */
+    background-color: #4CAF50;
+    /* Màu nền nút */
+    border: none;
+    /* Không có đường viền */
+    color: white;
+    /* Màu chữ */
+    font-size: 24px;
+    /* Kích thước của icon */
+    border-radius: 50%;
+    /* Làm cho nút tròn */
+    width: 60px;
+    /* Chiều rộng của nút */
+    height: 60px;
+    /* Chiều cao của nút */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+    /* Màu nền khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* Đổ bóng khi hover */
+}
+
+.add-btn i {
+    font-size: 32px;
+    /* Kích thước icon */
+}
+
+
+/* Nút submit, ví dụ như Thêm ga tàu hoặc Cập nhật ga tàu */
+.submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Modal container */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Đảm bảo nền mờ */
+    z-index: 1000;
+    /* Đảm bảo modal ở trên cùng */
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1010;
+    /* Modal content trên modal background */
+    background-color: white;
+    padding: 20px;
+    margin: 10% auto;
+    width: 50%;
+}
+
+/* Header modal, bao gồm nút đóng */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Các ô input */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Các nút trong modal */
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+    /* Tạo khoảng cách giữa các nút */
+}
+
+/* Nút đóng thứ hai ở dưới */
+.bottom-close-btn {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bottom-close-btn:hover {
+    background-color: #e1e1e1;
+}
+
+/* Nút submit */
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.search-input {
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 400px;
+}

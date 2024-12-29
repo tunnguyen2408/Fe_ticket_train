@@ -1,0 +1,196 @@
+.route-item {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.route-item:hover {
+  background-color: #f0f0f0;
+  /* Màu nền khi hover */
+}
+
+
+.route-actions {
+  display: none; /* Ban đầu ẩn các nút */
+  position: absolute; /* Đặt nút vào vị trí tuyệt đối trong .route-item */
+  top: 50%; /* Canh giữa theo chiều dọc */
+  right: 10px; /* Đặt nút ở bên phải */
+  transform: translateY(-50%); /* Canh giữa chính xác theo chiều dọc */
+  flex-direction: column;
+}
+
+.route-item:hover .route-actions {
+  display: flex; /* Hiển thị các nút khi hover */
+}
+
+.route-item:hover .route-info {
+  margin-right: 120px; /* Đẩy phần nội dung ra 120px sang phải khi hover */
+}
+
+.edit-btn, .delete-btn-routes {
+  padding: 10px;
+  width: 90px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5px; /* Tạo khoảng cách giữa các nút */
+}
+
+.edit-btn:hover,
+.delete-btn-routes:hover {
+  background-color: #0056b3;
+  /* Đổi màu khi hover vào nút */
+}
+
+.edit-btn {
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.delete-btn-routes {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.delete-btn-routes:hover {
+  background-color: #c82333;
+}
+
+.route-info {
+  transition: margin-left 0.3s ease-in-out; /* Hiệu ứng chuyển động khi nút xuất hiện */
+}
+
+.route-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  text-align: right;
+}
+
+.add-route-btn {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-route-btn:hover {
+  background-color: #45a049;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Chỉnh kiểu cho danh sách điểm đi qua */
+.stop-station-list {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stop-station-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stop-station-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.remove-stop-button {
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-stop-button:hover {
+  background-color: #e60000;
+}
+
+.remove-stop-button:focus {
+  outline: none;
+}
+
+/* Chỉnh kiểu cho danh sách các điểm có thể chọn */
+.add-stop-stations {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.add-stop-stations button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-stop-stations button:hover {
+  background-color: #0056b3;
+}
+
+.add-stop-stations button:focus {
+  outline: none;
+}
+
+/* Nút "Thêm điểm đi qua" */
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Chỉnh kiểu cho phần tử khi chưa có điểm đi qua */
+.stop-station-list p {
+  font-style: italic;
+  color: #777;
+}

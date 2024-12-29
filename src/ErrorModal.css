@@ -1,0 +1,64 @@
+.error-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Tạo nền mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.error-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn-modal {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    /* Màu đỏ */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-btn-modal:hover {
+    background-color: #d32f2f;
+    /* Màu đỏ đậm khi hover */
+}
+
+/* Nút đóng bên dưới cùng */
+.close-btn-bottom {
+    margin-top: 20px;
+    /* Đảm bảo nút có khoảng cách dưới cùng */
+    padding: 10px 20px;
+    background-color: #f44336;
+    /* Màu đỏ */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-btn-bottom:hover {
+    background-color: #d32f2f;
+    /* Màu đỏ đậm khi hover */
+}
