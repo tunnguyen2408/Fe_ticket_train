@@ -29,7 +29,7 @@ function Trains() {
   useEffect(() => {
     const fetchTrains = async () => {
       try {
-        const response = await fetch("http://192.168.0.102:8080/trains");
+        const response = await fetch("http://localhost:8080/trains");
         if (!response.ok) {
           throw new Error("Không thể tải danh sách tàu");
         }
@@ -74,7 +74,7 @@ function Trains() {
   const handleAddTrain = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://192.168.0.102:8080/trains", {
+      const response = await fetch("http://localhost:8080/trains", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newTrain),
@@ -105,7 +105,7 @@ function Trains() {
     const isConfirmed = window.confirm("Bạn có chắc chắn muốn xóa tàu này?");
     if (isConfirmed) {
       try {
-        const response = await fetch(`http://192.168.0.102:8080/trains/${id}`, {
+        const response = await fetch(`http://localhost:8080/trains/${id}`, {
           method: "DELETE",
         });
 
@@ -127,7 +127,7 @@ function Trains() {
     console.log("selectedTrain😗" + selectedTrain.id)
     try {
       // Gửi yêu cầu PUT để cập nhật tàu
-      const response = await fetch(`http://192.168.0.102:8080/trains/${selectedTrain.id}`, {
+      const response = await fetch(`http://localhost:8080/trains/${selectedTrain.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

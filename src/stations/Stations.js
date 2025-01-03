@@ -25,7 +25,7 @@ function Stations() {
   useEffect(() => {
     const fetchStations = async () => {
       try {
-        const response = await fetch("http://192.168.0.102:8080/stations", {
+        const response = await fetch("http://localhost:8080/stations", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function Stations() {
 
     console.log("👹" + JSON.stringify(newStation))
     try {
-      const response = await fetch("http://192.168.0.102:8080/stations", {
+      const response = await fetch("http://localhost:8080/stations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +100,7 @@ function Stations() {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://192.168.0.102:8080/stations/${newStation.stationCode}`, {
+      const response = await fetch(`http://localhost:8080/stations/${newStation.stationCode}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -161,7 +161,7 @@ function Stations() {
 
     if (isConfirmed) {
       // Nếu người dùng xác nhận, thực hiện việc xóa
-      fetch(`http://192.168.0.102:8080/stations/${stationCode}`, {
+      fetch(`http://localhost:8080/stations/${stationCode}`, {
         method: "DELETE",
       })
         .then((response) => {

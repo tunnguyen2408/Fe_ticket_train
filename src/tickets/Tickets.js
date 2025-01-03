@@ -13,9 +13,9 @@ function Tickets() {
   const fetchData = async () => {
     try {
       const ticketResponse = await fetch("http://localhost:8080/tickets");
-      const trainResponse = await fetch("http://192.168.0.102:8080/trains");
-      const scheduleResponse = await fetch("http://192.168.0.102:8080/schedules");
-      const routeResponse = await fetch("http://192.168.0.102:8080/routes");  // Fetch tuyến đường
+      const trainResponse = await fetch("http://localhost:8080/trains");
+      const scheduleResponse = await fetch("http://localhost:8080/schedules");
+      const routeResponse = await fetch("http://localhost:8080/routes");  // Fetch tuyến đường
       const ticketTypeResponse = await fetch("http://localhost:8080/ticket-types");
 
       const ticketData = await ticketResponse.json();

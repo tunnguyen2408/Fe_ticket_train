@@ -3,12 +3,16 @@
 }
 
 .add-station-btn {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    position: fixed; /* hoặc absolute */
+  bottom: 20px; /* Khoảng cách từ đáy màn hình */
+  right: 20px; /* Khoảng cách từ phải màn hình */
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 9999;
 }
 
 .add-station-form {
@@ -110,6 +114,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Đổ bóng */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 999;
 }
 
 .add-btn:hover {

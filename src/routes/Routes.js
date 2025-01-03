@@ -59,7 +59,7 @@ function Routes() {
   useEffect(() => {
     const fetchStations = async () => {
       try {
-        const response = await fetch("http://192.168.0.102:8080/stations", {
+        const response = await fetch("http://localhost:8080/stations", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -85,7 +85,7 @@ function Routes() {
   useEffect(() => {
     const fetchRoutes = async () => {
       try {
-        const response = await fetch("http://192.168.0.102:8080/routes", {
+        const response = await fetch("http://localhost:8080/routes", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -122,7 +122,7 @@ function Routes() {
 
     if (isConfirmed) {
       // Nếu người dùng xác nhận, thực hiện việc xóa
-      fetch(`http://192.168.0.102:8080/routes/${routeId}`, {
+      fetch(`http://localhost:8080/routes/${routeId}`, {
         method: "DELETE",
       })
         .then((response) => {
@@ -150,7 +150,7 @@ function Routes() {
   
       console.log("🤢" + JSON.stringify(updatedRoute));
   
-      const response = await fetch("http://192.168.0.102:8080/routes", {
+      const response = await fetch("http://localhost:8080/routes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -238,7 +238,7 @@ const handleUpdateStopStation = (stationCode) => {
     e.preventDefault();
     const { id } = updatedRoute;
   
-    fetch(`http://192.168.0.102:8080/routes/${id}`, {
+    fetch(`http://localhost:8080/routes/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

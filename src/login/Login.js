@@ -14,7 +14,7 @@ function Login() {
 
     axios
       .post(
-        "http://192.168.0.102:8080/admins/login",
+        "http://localhost:8080/admins/login",
         {
           mailid: email,
           pword: password,

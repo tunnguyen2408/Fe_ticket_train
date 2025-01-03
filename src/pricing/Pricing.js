@@ -41,9 +41,9 @@ function Pricing() {
   const fetchAdditionalData = async () => {
     try {
       const [trainsResponse, ticketTypesResponse, routesResponse] = await Promise.all([
-        fetch("http://192.168.0.102:8080/trains"),
-        fetch("http://192.168.0.102:8080/ticket-types"),
-        fetch("http://192.168.0.102:8080/routes"),
+        fetch("http://localhost:8080/trains"),
+        fetch("http://localhost:8080/ticket-types"),
+        fetch("http://localhost:8080/routes"),
       ]);
 
       if (!trainsResponse.ok || !ticketTypesResponse.ok || !routesResponse.ok) {

@@ -12,7 +12,7 @@ import TicketTypes from './ticket-types/TicketTypes.js';
 import Pricing from './pricing/Pricing.js'; 
 import Tickets from './tickets/Tickets.js'; 
 import Payments from './payments/Payments.js'; 
-import History from './history/History.js'; 
+import History from './history/History.js';  
 
 
 function App() {
@@ -33,8 +33,8 @@ function App() {
           <Route path="ticket-types" element={<TicketTypes />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="tickets" element={<Tickets />} />
-          <Route path="payments" element={<Payments />} />
-          <Route path="history" element={<History />} />
+          {/* <Route path="payments" element={<Payments />} />
+          <Route path="history" element={<History />} /> */}
         </Route>
       </Routes>
     </Router>

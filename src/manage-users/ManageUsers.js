@@ -10,7 +10,7 @@ function ManageUsers() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://192.168.0.102:8080/customers", {
+        const response = await fetch("http://localhost:8080/customers", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -40,7 +40,7 @@ function ManageUsers() {
   
     if (confirmDelete) {
       try {
-        const response = await fetch(`http://192.168.0.102:8080/customers/${userId}`, {
+        const response = await fetch(`http://localhost:8080/customers/${userId}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",
@@ -65,7 +65,7 @@ function ManageUsers() {
     const confirmDelete = window.confirm("Are you sure you want to delete this user?");
     if (confirmDelete) {
       try {
-        const response = await fetch(`http://192.168.0.102:8080/customers/${mailid}`, {
+        const response = await fetch(`http://localhost:8080/customers/${mailid}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

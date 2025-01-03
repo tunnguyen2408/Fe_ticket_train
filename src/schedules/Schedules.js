@@ -40,9 +40,9 @@ function Schedules() {
   const fetchAdditionalData = async () => {
     try {
       const [trainsResponse, routesResponse, stationsResponse] = await Promise.all([
-        fetch("http://192.168.0.102:8080/trains"),
-        fetch("http://192.168.0.102:8080/routes"),
-        fetch("http://192.168.0.102:8080/stations"),
+        fetch("http://localhost:8080/trains"),
+        fetch("http://localhost:8080/routes"),
+        fetch("http://localhost:8080/stations"),
       ]);
 
       if (!trainsResponse.ok || !routesResponse.ok || !stationsResponse.ok) {
@@ -80,8 +80,8 @@ function Schedules() {
   const handleSave = async () => {
     try {
       const url = editId
-        ? `http://192.168.0.102:8080/schedules/${editId}`
-        : "http://192.168.0.102:8080/schedules";
+        ? `http://localhost:8080/schedules/${editId}`
+        : "http://localhost:8080/schedules";
       const method = editId ? "PUT" : "POST";
 
       const convertToISO8601 = (time) => {

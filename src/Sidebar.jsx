@@ -16,8 +16,8 @@ function Sidebar({ activeSection, setActiveSection }) {
     { key: 'ticket-types', label: 'Các loại vé', path: '/home/ticket-types' },
     { key: 'pricing', label: 'Giá vé', path: '/home/pricing' },
     { key: 'tickets', label: 'Vé', path: '/home/tickets' },
-    { key: 'payments', label: 'Thanh toán', path: '/home/payments' },
-    { key: 'history', label: 'Lịch sử giao dịch', path: '/home/history' },
+    // { key: 'payments', label: 'Thanh toán', path: '/home/payments' },
+    // { key: 'history', label: 'Lịch sử giao dịch', path: '/home/history' },
     { key: 'logout', label: 'Đăng xuất', path: '#' },
   ];
 
